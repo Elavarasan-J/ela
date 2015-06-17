@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="assets/css/selectize.css"/>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="assets/css/style.css"/>
+    </head>
+    <body ng-app="myApp">
+        <div class="container" ng-controller="myController" style="padding:30px;">
+           
+            <div class="form-group">
+				<uploader class="clearfix">
+					<h4 class="text-center">File upload using angular</h4>
+					<div class="col-lg-5">
+						<input ng-model="filename" type="file"/>
+					</div>
+					<div class="col-lg-4">
+						<button class="btn btn-success" type="button">Upload button</button>
+						<p ng-bind="filename">{{name}}</p>
+					</div>
+				</uploader>
+            </div>
+			
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="form-group">
+						<h4>Add class using angular js</h4>
+						
+						<div ng-class="color">
+							<h3>Text in {{color}}</h3>
+						</div>
+						<button ng-click="changeClass();">Change color</button>
+					</div>
+					
+					<input type="text" class="form-control datapicker" datepicker/>
+				</div>
+			</div>
+        </div>
+        
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/angular/angular.min.js"></script>
+		<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.min.js"/>
+		<script src="assets/js/angular-selectize.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script src="app/controller/controller.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,59 @@
+uploader input[type="file"]
+{
+    visibility: hidden;
+    height: 1px;
+    color: #3572b0;
+}
+
+//* full calender styles **/
+
+.cal-background
+{
+    position: relative;
+}
+.cal-background .fc-toolbar button
+{
+    background: #4ccbaf;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+}
+.cal-background .fc-toolbar .fc-left,.cal-background .fc-toolbar .fc-right
+{
+    position: absolute;
+    top: 10%;
+}
+.cal-background .fc-toolbar .fc-left
+{
+    left: 0px;
+}
+.cal-background .fc-toolbar .fc-right
+{
+    right: 0px; 
+}
+.cal-background .custom-cal .fc-day-header
+{
+    background-color: #4ccbaf;
+    color: #fff;
+    border-right: 1px solid #ddd;
+    padding: 10px 25px;
+}
+
+.text-red
+{
+	color: #f00;
+}
+.text-green
+{
+	color: green;
+}
+h4
+{  border-bottom: 1px solid #ddd;
+  display: inline-block;
+  padding-bottom: 12px;
+  font-size: 20px;
+}
+h3
+{
+	margin: 0 0 10px 0;
+}

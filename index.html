@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="assets/css/style.css"/>
+    </head>
+    <body ng-app="myApp">
+        <div class="container" ng-controller="myController">
+            <br><br>
+            <div class="form-group">
+                
+                <uploader>
+                    <h4 class="text-center">File upload using angular</h4>
+                    <div class="col-lg-5">
+                        <input ng-model="filename" type="file"/>
+                    </div>
+                    <div class="col-lg-4">
+                        <button class="btn btn-success" type="button">Upload button</button>
+                        <p ng-bind="filename">{{name}}</p>
+                    </div>
+                </uploader>
+				
+				
+            </div>
+            
+            <div class="form-group">
+                <a href="#">Click Here</a>
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">service</a></li>
+                    <li><a href="#">method</a></li>
+                </ul>
+                <small>Small text element</small>
+            </div>
+			
+			
+ 
+        </div>
+        
+         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+         <script src="app/controller/controller.js"></script>		  
+    </body>
+</html>

@@ -96,3 +96,56 @@ huyuApp.directive('loading',   ['$http' ,function ($http)
         };
 
     }]);
+
+
+
+(function() {
+  $(document).ready(function() {
+    $(document).on('click', '.popover-btn', function(e) {
+      $(this).parent().find('.custom-popover-wrap').toggle();
+      return e.preventDefault();
+    });
+    $(document).on('click', '.popover-close', function(e) {
+      $(this).parent().hide();
+      return e.preventDefault();
+    });
+    $(document).on('click', '.edit-icon', function(e) {
+      console.log('Executed');
+      $(this).parents('.edit-wrap').children().find('.input-box').toggleClass('hidden');
+      $(this).parents('.edit-wrap').children().find('.info-text').toggleClass('hidden');
+      return e.preventDefault();
+    });
+    $(document).on('click', '.view-contact', function(e) {
+      $('.contact-user:nth-child(n+8)').toggleClass('show-contact');
+      return e.preventDefault();
+    });
+    $(document).on('click', '.dropdown-icon', function(e) {
+      if ($(this).hasClass('fa-chevron-circle-down')) {
+        $(this).toggleClass('fa-chevron-circle-up');
+        $(this).parent().find('.dropdown-content').toggle();
+      } else if (!$(this).hasClass('fa-chevron-circle-down')) {
+        $(this).parent().find('.dropdown-content').toggle();
+      }
+      return e.preventDefault();
+    });
+    $(document).on('click', '.browse-button', function(e) {
+      $(this).parent('.file-upload').children('.hidden-class').trigger('click');
+      return e.preventDefault();
+    });
+    $(document).on('change', '.file-upload .hidden-class', function(e) {
+      $(this).parent('.file-upload').children('.uploaded-file').append(e.target.value);
+      console.log(e);
+      return e.preventDefault();
+    });
+    return $(document).on('click', '.modal-btn', function(e) {
+      var nextModal;
+      e.preventDefault();
+      nextModal = $(this).attr('data-target');
+      $(this).closest('.modal').modal('hide');
+      return $(nextModal).on('shown.bs.modal', function() {
+        return $('body').addClass('modal-open');
+      });
+    });
+  });
+
+}).call(this);

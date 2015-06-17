@@ -44,4 +44,19 @@ app.directive('datepicker',function(){
 });
 
 
+app.directive('editIcon',function(){
+	return{
+		restrict : 'A',
+		link : function(scope, element,attrs)
+		{
+			element.bind('click',function(){
+				element.parent('.edit-wrap').find('.info-text').toggleClass('hidden');
+				element.parent('.edit-wrap').find('.input-box').toggleClass('hidden');
+			});
+		}
+	}
+});
+
+
+
 

@@ -48,7 +48,7 @@ uploader input[type="file"]
 	color: green;
 }
 h4
-{  border-bottom: 1px solid #ddd;
+{ /* border-bottom: 1px solid #ddd;*/
   display: inline-block;
   padding-bottom: 12px;
   font-size: 20px;

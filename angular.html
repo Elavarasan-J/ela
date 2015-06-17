@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="assets/css/selectize.css"/>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
         <link rel="stylesheet" href="assets/css/style.css"/>
     </head>
@@ -10,16 +11,13 @@
         <div class="container" ng-controller="myController" style="padding:30px;">
            
             <div class="form-group">
-				<uploader class="clearfix">
+				<uploader>
 					<h4 class="text-center">File upload using angular</h4>
-					<div class="col-lg-5">
-						<input ng-model="filename" type="file"/>
-					</div>
-					<div class="col-lg-4">
-						<button class="btn btn-success" type="button">Upload button</button>
-						<p ng-bind="filename">{{name}}</p>
-					</div>
+					<input ng-model="filename" type="file"/>
+					<button class="btn btn-success" type="button">Upload button</button>
+					<p ng-bind="filename">{{name}}</p>
 				</uploader>
+				
             </div>
 			
 			<div class="row">
@@ -30,14 +28,28 @@
 						<div ng-class="color">
 							<h3>Text in {{color}}</h3>
 						</div>
-						<button ng-click="changeClass();">Change color</button>
+						<button ng-click="changeClass();">Change color</button>						 
 					</div>
 					
+					<h4>Datepicker</h4>
 					<input type="text" class="form-control datapicker" datepicker/>
 					
-					<div class="form-group">
-						<input type="text" class="form-control datapicker" datepicker/>
+					<h4>Edit option</h4>
+						
+					<div class="form-group edit-wrap">
+					 	<a class="fa fa-pencil fa-2x" edit-icon href="#"></a>
+						 <div class="form-group">
+							<label class="info-label">name:</label>						
+							<p class="info-text">john stedman</p>
+							<input type="text" ng-model="tt" class="form-control input-box hidden input-sm"/>
+						 </div>
 					</div>
+					
+					<div class="form-group">
+						<input type="text" ng-model="test"/>
+						<span ng-if="test">dfgdfg</span>
+					</div>
+					
 				</div>
 			</div>
         </div>
